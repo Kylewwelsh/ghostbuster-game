@@ -1,0 +1,194 @@
+header, footer {
+  text-align: center;
+  background-color: violet;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 2rem;
+}
+
+/* Styles from the rooms when they are dark */
+.room1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 30rem;
+  height: 30rem;
+  border: solid black;
+  margin: 1rem;
+  background-color: black;
+}
+
+.room2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 30rem;
+  height: 30rem;
+  border: solid black;
+  margin: 1rem;
+  background-color: black;
+}
+
+.room3 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 30rem;
+  height: 30rem;
+  border: solid black;
+  margin: 1rem;
+  background-color: black;
+}
+
+.room4 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 30rem;
+  height: 30rem;
+  border: solid black;
+  margin: 1rem;
+  background-color: black;
+}
+
+.room5 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 30rem;
+  height: 30rem;
+  border: solid black;
+  margin: 1rem;
+  background-color: black;
+}
+
+/* styles for the light switch plates (the things that go one walls for switches, I think that is what they are called) */
+.light-switch {
+  display: flex;
+  flex-flow: column wrap;
+  height: 9rem;
+  width: 6rem;
+  background-color: rgb(239, 239, 239);
+  border-radius: 10%
+}
+
+/* the actual light switches when they are in the off position */
+.switch1, .switch2, .switch3, .switch4, .switch5 {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  height: 6rem;
+  width: 3rem;
+  margin: auto;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+/* all svgs are in an img tag, this hides them until their specific button is hit */
+img {
+  visibility: hidden;
+}
+
+/* css style for the light switch button when it is clicked to give it a look of a lightswitch being pushed in */
+.clicked {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  height: 6rem;
+  width: 3rem;
+  margin: auto;
+  border: solid black;
+  border-width: 5px;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+/* css style for a room when it is turned on with the button */
+.room-on {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 30rem;
+  height: 30rem;
+  border: solid black;
+  margin: 1rem;
+  background-color: grey;
+}
+
+/* css style for the lightbulb svg when it is turned on, gives it look of a turned on light */
+.light-on {
+  background-color: yellow;
+  visibility: visible;
+  height: max-content;
+}
+
+/* css style for the X boxes that come on when the wrong room is clicked */
+.wrong {
+  visibility: visible;
+  height: max-content;
+  margin: auto;
+}
+
+/* css style style for the ghost when room 4 is off */
+.ghost-button {
+  visibility: hidden;
+  height: 250px;
+  width: 250px;
+}
+
+
+/* css style for when room 4 is turned on and the ghost appears */
+.ghost-on {
+  background-image: url(../images/ghost.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  outline: none;
+  border: none;
+  visibility: visible;
+  height: 250px;
+  width: 250px;
+  margin: 0;
+  animation-name: enlarge;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  position: absolute;
+}
+
+/* css style for the ghostbuster gun that shows up when hovering over the ghost */
+.ghost-button:hover {
+  cursor: url(../images/mouse-gun.svg), default !important;
+}
+
+/* css style to make the ghost dissapear when clicked */
+.ghostbuster {
+  visibility: hidden;
+}
+
+/* css style for the message that the user has won before they killed the ghost */
+.win {
+  visibility: hidden;
+}
+
+/* css style for the message that the user has won after they killed the ghost */
+.winner {
+  visibility: visible;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* anumation to enlarge and rotate the ghost when it is found */
+@keyframes enlarge {
+  from {
+      transform:scale(0) rotate(0deg);  
+  }
+  to {
+      transform: scale(1.5) rotate(360deg);
+  }
+}
