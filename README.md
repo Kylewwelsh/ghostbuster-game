@@ -1,4 +1,4 @@
-# Ghostbuster Gamer
+# Basic JavaScript Ghostbuster Game
 
 ## Originally a school project for SAIT
 
